@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>65Creativity</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f3f4f6;
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+        }
+        .bg-cover {
+            background-size: cover;
+            background-position: center;
+            transition: background-image 1s ease-in-out;
+        }
+        .slide-down {
+            max-height: 0;
+            transition: max-height 0.3s ease-out;
+        }
+        .slide-up {
+            max-height: 1000px; /* Adjust based on your content height */
+            transition: max-height 0.3s ease-in;
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .bg-white {
+            background-color: white;
+        }
+        .navbar-hide {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .navbar-show {
+            transform: translateY(0);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <nav id="navbar" class="bg-white p-4 shadow-lg fixed w-full z-10 drop-shadow-lg navbar-show">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="image/logo.png" alt="School Logo" class="h-8 w-8">
+                <div class="text-gray-800 text-3xl font-bold drop-shadow">
+                    65 Creativity
+                </div>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-gray-800 hover:bg-gray-200 transition duration-300 px-3 py-2 rounded-md text-lg font-medium">Home</a>
+                <a href="#about" class="text-gray-800 hover:bg-gray-200 transition duration-300 px-3 py-2 rounded-md text-lg font-medium">About Us</a>
+                <a href="#gallery" class="text-gray-800 hover:bg-gray-200 transition duration-300 px-3 py-2 rounded-md text-lg font-medium">Gallery</a>
+                <a href="#archive" class="text-gray-800 hover:bg-gray-200 transition duration-300 px-3 py-2 rounded-md text-lg font-medium">Archive</a>
+                <a href="#contact" class="text-gray-800 hover:bg-gray-200 transition duration-300 px-3 py-2 rounded-md text-lg font-medium">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden overflow-hidden slide-down">
+            <a href="#home" class="block text-gray-800 hover:bg-gray-200 transition duration-300 px-3 py-2 rounded-md text-base font-medium">Home</a>
+            <a href="#about" class="block text-gray-800 hover:bg-gray-200 transition duration-300 px-3 py-2 rounded-md text-base font-medium">About Us</a>
+            <a href="#gallery" class="block text-gray-800 hover:bg-gray-200 transition duration-300 px-3 py-2 rounded-md text-base font-medium">Gallery</a>
+            <a href="#archive" class="block text-gray-800 hover:bg-gray-200 transition duration-300 px-3 py-2 rounded-md text-base font-medium">Archive</a>
+            <a href="#contact" class="block text-gray-800 hover:bg-gray-200 transition duration-300 px-3 py-2 rounded-md text-base font-medium">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home" class="bg-cover section">
+        <div class="text-center">
+            <h1 class="text-5xl font-bold text-blue-500 text-shadow">Welcome to 65 Creativity</h1>
+            <p class="mt-4 text-xl text-white text-shadow">Bringing Your Ideas to Life</p>
+        </div>
+    </section>
+
+    <section id="about" class="bg-white py-20 ">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-8 animate__animated animate__fadeInUp">
+                <i class="fas fa-users"></i> About Us
+            </h2>
+            <p class="text-lg text-gray-600 mb-12 animate__animated animate__fadeInUp animate__delay-1s">
+                65Creativity adalah tim inti expo dari SMK Negeri 65 Jakarta Timur yang selalu menggelar pameran dari masing-masing jurusan yaitu Rekayasa Perangkat Lunak, Broadcasting Film, dan Desain Komunikasi Visual di berbagai event expo. Kami berkomitmen untuk menampilkan kreativitas dan inovasi terbaik dari siswa-siswi kami. Tim kami terdiri dari individu-individu berbakat yang berdedikasi untuk menghasilkan karya-karya berkualitas tinggi. Melalui pameran-pameran kami, kami bertujuan untuk menginspirasi dan mengedukasi masyarakat tentang potensi yang dimiliki oleh generasi muda dalam bidang teknologi, desain, dan media. Kami percaya bahwa setiap karya yang kami tampilkan merepresentasikan semangat dan visi SMK Negeri 65 Jakarta Timur dalam mengembangkan talenta-talenta muda yang siap bersaing di era digital.
+            </p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="bg-gray-100 py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-8 animate__animated animate__fadeInUp">
+                <i class="fas fa-images"></i> Galeri Karya
+            </h2>
+            <select id="jurusan-select" class="mb-8 p-2 rounded-md">
+                <option value="dkv">Desain Komunikasi Visual</option>
+                <option value="rpl">Rekayasa Perangkat Lunak</option>
+                <option value="bcf">Broadcasting Film</option>
+            </select>
+            <div id="gallery-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Konten galeri akan diisi melalui JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Archive Section -->
+    <section id="archive" class="bg-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-8 animate__animated animate__fadeInUp">
+                <i class="fas fa-archive"></i> Arsip Expo
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4">Expo Pendidikan | Job Fair</h3>
+                    <img src="image/pendidikan.jpeg" alt="Expo 2023" class="w-full h-48 object-cover mb-4 rounded">
+                    <p class="text-gray-600">Expo Pendidikan dan Job Fair: Mempertemukan SD, SMP, SMA, SMK, hingga universitas, masing-masing memamerkan program dan peluang yang mereka tawarkan. Kesempatan emas untuk menjelajahi dunia pendidikan dan karier!.</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4">1001 Karya SMK DKV</h3>
+                    <img src="image/oktober.png" alt="Expo 2022" class="w-full h-48 object-cover mb-4 rounded">
+                    <p class="text-gray-600">Pameran 1001 Karya SMK DKV dan Grafika: Menampilkan kreativitas siswa melalui desain visual dan grafika inovatif. Sukses dan inspiratif! ( SMKN 26 )</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4">All Print indonesia | Expo</h3>
+                    <img src="image/dkvvv.jpeg" alt="AllPrint" class="w-full h-48 object-cover mb-4 rounded">
+                    <p class="text-gray-600"> 
+                        ALLPRINT EXPO 2024 adalah pameran internasional ke-25 yang menghadirkan solusi lengkap untuk teknologi, peralatan, bahan, dan mesin percetakan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Tambahkan ini di head untuk animasi dan Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">    
+    
+
+    <section class="contact-section" id="contact">
+        <div class="contact-form">
+            <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" class="form-input" required>
+                <input type="email" name="email" placeholder="Your Email" class="form-input" required>
+                <textarea name="message" rows="4" placeholder="Your Message" class="form-input" required></textarea>
+                <button type="submit" class="form-submit">Send Message</button>
+            </form>
+        </div>
+        <div class="contact-icons">
+            <a href="https://wa.me/6282125511485" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com/65creativity" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:azhif.firdaus25@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+    </section>
+
+    <footer class="bg-blue-100 text-center py-8">
+        <div class="container mx-auto px-4">
+            <p class="text-blue-600 mb-2">&copy; 2024 65Creativity. All Rights Reserved.</p>
+
+    <script>
+        const images = [
+            'image/bg1.png',
+            'image/bg2.png',
+            'image/bg3.png',
+            'image/bg4.png'
+        ];
+        let currentIndex = 0;
+
+        function changeBackground() {
+            const homeSection = document.getElementById('home');
+            homeSection.style.backgroundImage = `url(${images[currentIndex]})`;
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('slide-down')) {
+                menu.classList.remove('slide-down');
+                menu.classList.add('slide-up');
+            } else {
+                menu.classList.remove('slide-up');
+                menu.classList.add('slide-down');
+            }
+        });
+
+        // Change background image every 5 seconds
+        setInterval(changeBackground, 5000);
+
+        // Set initial background image
+        changeBackground();
+
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                // Scroll Down
+                navbar.classList.remove('navbar-show');
+                navbar.classList.add('navbar-hide');
+            } else {
+                // Scroll Up
+                navbar.classList.remove('navbar-hide');
+                navbar.classList.add('navbar-show');
+            }
+            lastScrollTop = scrollTop;
+        });
+
+        const galleryData = {
+        dkv: [
+            { src: "image/dkv-photobooth.png", alt: "Photobooth Karya DKV", caption: "Photobooth Karya DKV", description: "Desain photobooth interaktif yang menggabungkan elemen visual menarik dan teknologi augmented reality." },
+            { src: "image/dkv-pin.jpg", alt: "Poster Pin DKV", caption: "Poster Pin DKV", description: "Pin custom dengan desain unik yang mencerminkan gaya dan kepribadianmu! Aksesori sempurna untuk menambah statement pada setiap penampilan." },
+            { src: "image/dkv-mug.jpg", alt: "Mug Karya DKV", caption: "Mug Karya DKV", description: "Desain mug yang unik dan eye-catching, menggabungkan estetika dengan fungsionalitas." }
+        ],
+        rpl: [
+            { src: "image/rpl-website.jpg", alt: "Website Karya RPL", caption: "Website Karya RPL", description: "Platform e-voter OSIS dan MPK yang memudahkan pemilihan secara online! Desain modern, akses cepat, dan proses voting transparan untuk memastikan suara kamu terhitung dengan aman dan akurat." },
+            { src: "image/rpl-app.jpg", alt: "Aplikasi Karya RPL", caption: "Aplikasi Karya RPL", description: "Aplikasi koperasi sekolah yang praktis dan mudah digunakan! Belanja kebutuhan sekolah, cek stok barang, hingga transaksi, semua bisa dilakukan langsung dari smartphone." },
+            { src: "image/rpl-game.jpg", alt: "Game Karya RPL", caption: "Game Karya RPL", description: "Masuki galaksi penuh aksi di Cosmic Vortex! Kendalikan pesawat tempurmu, hadapi gelombang musuh luar angkasa, dan hancurkan mereka di medan perang antariksa. Apakah kamu bisa bertahan dari kekuatan kosmik?" }
+        ],
+        bcf: [
+            { src: "image/bcf-posterfilm.jpeg", alt: "Film Poster Karya BCF", caption: "Film Poster Karya BCF", description: "Produk film adalah hasil dari proses produksi visual, seperti film pendek atau panjang. Ini mencakup berbagai format dan merupakan hasil kolaborasi tim produksi." },
+            { src: "image/bcf-baju.jpeg", alt: "Baju Karya BCF", caption: "Baju Karya BCF", description: "Baju perfilman jurusan BCF adalah seragam yang mencerminkan identitas jurusdengan, an desain khas terkait dunia film, seperti logo kamera dan simbol kreatifitas. Ini menjadi kebanggaan siswa dalam bidang penyiaran dan perfilman." },
+            { src: "image/bcf-aksesoris.png", alt: "Fotografi Karya BCF", caption: "Aksesoris Karya BCF", description: "Kerajinan aksesoris manik-manik adalah gelang, kalung, atau hiasan yang dibuat dengan merangkai manik-manik berwarna, menampilkan pola unik dan kreativitas." }
+        ]
+    };
+
+    const jurusanSelect = document.getElementById("jurusan-select");
+    const galleryContainer = document.getElementById("gallery-container");
+
+    jurusanSelect.addEventListener("change", function() {
+        const selectedJurusan = jurusanSelect.value;
+        const galleryItems = galleryData[selectedJurusan];
+
+        galleryContainer.innerHTML = "";
+        galleryItems.forEach(function(item) {
+            const galleryItem = document.createElement("div");
+            galleryItem.classList.add("bg-gray-100", "p-6", "rounded-lg", "shadow-lg", "transform", "transition-transform", "duration-500", "hover:scale-105", "hover:shadow-2xl", "animate__animated", "animate__fadeInUp");
+
+            const image = document.createElement("img");
+            image.src = item.src;
+            image.alt = item.alt;
+            image.classList.add("gallery-image");
+
+            const caption = document.createElement("span");
+            caption.textContent = item.caption;
+            caption.classList.add("text-white", "text-sm", "px-2", "py-1", "bg-black", "bg-opacity-75", "rounded");
+
+            const description = document.createElement("p");
+            description.textContent = item.description;
+            description.classList.add("text-gray-600", "text-sm", "mt-4");
+
+            const overlay = document.createElement("div");
+            overlay.classList.add("absolute", "inset-0", "bg-black", "bg-opacity-50", "opacity-0", "group-hover:opacity-100", "transition-opacity", "duration-500", "flex", "items-center", "justify-center");
+
+            overlay.appendChild(caption);
+            galleryItem.appendChild(image);
+            galleryItem.appendChild(overlay);
+            galleryItem.appendChild(description);
+            galleryContainer.appendChild(galleryItem);
+        });
+    });
+
+    // Tampilkan galeri default
+    jurusanSelect.dispatchEvent(new Event("change"));
+    </script>
+</body>
+</html>
